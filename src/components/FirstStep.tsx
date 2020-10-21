@@ -21,7 +21,7 @@ const FirstStep = ({ activeStep, setActiveStep, steps }: Props) => {
   const handleNext = () => {
     if(mealValue !== null && peopleNumber > 0 && peopleNumber <= 10){
       if(mealValue.name !== ''){
-        if(mealValue !== orderDetail.meal){
+        if(mealValue.name !== orderDetail.meal.name){
           orderDetail.meal = mealValue;
           orderDetail.people = peopleNumber;
           orderDetail.restaurant= '';
